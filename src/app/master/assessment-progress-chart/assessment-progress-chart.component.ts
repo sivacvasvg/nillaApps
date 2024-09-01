@@ -20,6 +20,7 @@ export type ChartOptions = {
   grid: ApexGrid;
   stroke: ApexStroke;
   title: ApexTitleSubtitle;
+  fill:any
 };
 
 @Component({
@@ -36,10 +37,12 @@ export class AssessmentProgressChartComponent {
     this.chartOptions = {
       series: [{
         name: 'Completed',
-        data: [44, 55, 57, 106]
+        data: [44, 55, 57, 106],
+        color:'#a6c88f'
       }, {
         name: 'Pending',
-        data: [76, 35, 20, 58,]
+        data: [76, 35, 20, 58,],
+        color:'#e8e8e8'
       }],
       chart: {
         height: 350,
@@ -72,14 +75,18 @@ export class AssessmentProgressChartComponent {
           "Lab"
         ],
         title: {
-          text: 'Weeks'
+          text: ''
         }
       },
       yaxis: {
         title: {
           text: ''
         },
+   
         
+      },
+      fill: {
+        colors: ['#a6c88f','#e8e8e8']
       }
     };
   }

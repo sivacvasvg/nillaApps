@@ -1,0 +1,32 @@
+<div class="card ">
+    <div class="card-body ">
+        @for (item of courseDetails; track $index) {
+            <div class="row mb-2">
+                <h5 class="mb-1">{{item?.heading}}</h5>
+                 @for (item of item.category; track $index) {
+                    <span class="mb-2">{{item}}</span>
+                 }
+            </div>
+        }
+        <div class="row mb-2">
+            <h5 class="mb-3">Course Outcomes (COs)</h5>
+            <div class="d-flex">
+                <span class="badge bg-green">CO2</span>
+                <span class="badge bg-green">CO4</span>
+                <span class="badge bg-green">CO5</span>
+                <span class="badge bg-green">CO7</span>
+                <span class="badge bg-green">CO13</span>
+                <span class="badge bg-green">CO14</span>
+            </div>
+        </div>
+        <div class="row mb-2">
+            <h5 class="mb-3">Mapped to this Course</h5>
+            <div class="d-flex">
+                <span class="badge bg-blue">PO7</span>
+                <span class="badge bg-blue">PO10</span>
+                <span class="badge bg-blue">PO12</span>
+                <span class="badge bg-blue">PO8</span>
+            </div>
+        </div>
+    </div>
+</div>
